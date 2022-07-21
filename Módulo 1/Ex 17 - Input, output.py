@@ -44,6 +44,4 @@ def Calculadora():
             print('\nResultado da operação escolhida: ',div)
 
 #chamando a função sem passar parâmetros, tendo em vista que, toda a operação está sendo feita dentro da função, incluindo os prints.            
-Calculadora()
-
-        
+Calculadora()        
