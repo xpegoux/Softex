@@ -11,6 +11,6 @@ count = range(5, 0, -1) #atribuindo o range decrementado à variável count.
 for i in count:
     print(i) 
     time.sleep(2)
-    os.system('clear')
+    os.system('clear') #limpando tela no terminal bash, caso for executar em cmd/powershell mudar para: 'cls'
 
 print("BUM!")

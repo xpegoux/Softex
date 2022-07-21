@@ -24,7 +24,7 @@ def Calculadora(n1, n2, op):
         return(0)
 
 #Interatividade para a escolha da operação
-print('Escolha o valor da operação:\n[1] - Soma\n[2] - Subtração\n[3] - Multiplicação\n[4] - Divisão\n')
+print('Escolha o tipo da operação:\n[1] - Soma\n[2] - Subtração\n[3] - Multiplicação\n[4] - Divisão\n')
 operador = int(input('Digite: ')) #armazenando entrada do operador
 #armazenando entrada dos numeros abaixo
 nu1 = float(input('\nDigite o primeiro número: ')) 
