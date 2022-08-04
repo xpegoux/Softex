@@ -23,7 +23,7 @@ class Pix:
         return self.__valor_transf
 
     def get_saldo(self):        
-        if (self.__valor_em_conta < 0): #construtor
+        if (self.__valor_em_conta < 0):
             raise Exception('ERRO: SALDO INSUFICIÊNTE!')       
         else:
             return print('Saldo atual: R$ {}'.format(self.__valor_em_conta))
@@ -41,7 +41,7 @@ cliente_1.get_valor_transf()
 cliente_1.set_saldo()
 print('')
 cliente_1.get_saldo()
-print('\nNova tentativa de transferência apresentando o MÉTODO CONSTRUTOR!\n')
+print('\nNova tentativa de transferência!\n')
 cliente_1.get_nome_completo()
 cliente_1.get_saldo()
 cliente_1.get_cpf()
