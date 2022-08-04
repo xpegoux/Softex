@@ -9,7 +9,7 @@ Digite o número para a operação correspondente e caso o usuário introduza qu
 Após a seleção, o sistema deve pedir para o usuário inserir o primeiro e segundo valor, um de cada. Depois precisa executar a operação e mostrar o resultado na tela. Quando o usuário escolher a opção “Sair”, o sistema irá parar. 
 É necessário que o sistema mostre as opções sempre que finalizar uma operação e mostrar o resultado.'''
 #Criando função sem parâmetros
-def Calculadora():
+def calculadora():
     sair = True 
     while sair == True: #iniciando loop
         print('\nEscolha o tipo da operação:\n[1] - Soma\n[2] - Subtração\n[3] - Multiplicação\n[4] - Divisão\n[0] - Sair')
@@ -42,4 +42,4 @@ def Calculadora():
             print('\nResultado da operação escolhida: ',div)
 
 #chamando a função sem passar parâmetros, tendo em vista que, toda a operação está sendo feita dentro da função, incluindo os prints.            
-Calculadora()        
+calculadora()        
