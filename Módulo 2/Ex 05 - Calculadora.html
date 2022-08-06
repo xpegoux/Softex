@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 05 - Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora JS</h1>
+    <p>Aluno: Erivaldo Barros</p>
+    <p>Com os conceitos aprendidos, crie um programa de calculadora que:</p>        
+    <p>[*] receba dois valores, que devem ser salvos em variáveis; </p>
+    <p>[*] o usuário deve colocar qual operador ele vai utilizar por meio dos símbolos aritméticos; </p>
+    <p>[*] com os dois valores e o operador definido, o programa deve fazer a operação e retornar o resultado;</p> 
+    <p>[*] se houver divisão, você deve retornar o resultado e a sobra, caso haja alguma.</p>
+
+    <h2>Resultados da Calculadora</h2>
+    <script>
+        //Definindo variáveis e recebimento de valores
+        var num_1 = Number(window.prompt('Digite o primeiro número:'))
+        var num_2 = Number(window.prompt('Digite o segundo número:'))
+        var operador = window.prompt('Digite o operador que você deseja calcular\n[+]\n[-]\n[*]\n[/]')
+        //Definindo condições para apresentar o cálculo dos números
+        if (operador == '+') {
+            document.write(`Soma: ${num_1 + num_2}`) //document.write é utilizado para mostrar no corpo do documento.
+        } else if (operador == '-') {
+            document.write(`Subtração: ${num_1 - num_2}`)
+        } else if (operador == '*') {
+            document.write(`Multiplicação: ${num_1 * num_2}`)
+        } else if (operador == '/') {
+            document.write(`Divisão: ${num_1 / num_2}`)
+            var resto = num_1 % num_2
+            if (resto != 0) {
+                document.write(`<br>Resto da divisão: ${resto}`)
+            }
+        } else {
+            window.alert('Operador inválido!')
+            document.write('Você digitou um operador inválido &#x1F613, atualize a página ou pressione <strong>F5</strong> e tente novamente &#x1F609.')
+        }
+    </script>
+</body>
+</html>
