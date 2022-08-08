@@ -1,22 +1,28 @@
-var num_1 = Number('Digite o primeiro número:');
-var num_2 = Number('Digite o segundo número:');
-var operador = ('Digite o operador que você deseja calcular\n[+]\n[-]\n[*]\n[/]');
+// pacote disponível para download em: www.npmjs.com/package/readline-sync
+var readline = require('readline-sync'); //receber o pacote readline para entrada de dados, armazenada na var readlineS.
+var num_1, num_2, total, resto;
+var operador;
 
+num_1 = Number(readline.question('Digite o primeiro numero: '));
+num_2 = Number(readline.question('Digite o segundo numero: '));
+operador = readline.question('Digite o operador que voce deseja calcular\n[+]   [-]\n[*]   [/]\n-> ');
 
-
-/*Definindo condições para apresentar o cálculo dos números
 if (operador == '+') {
-    console.log(`Soma: ${num_1 + num_2}`) //document.write é utilizado para mostrar no corpo do documento.
+    total = num_1 + num_2;
+    console.log(`Soma: ${total}`);
 } else if (operador == '-') {
-    console.log(`Subtracao: ${num_1 - num_2}`)
+    total = num_1 - num_2;
+    console.log(`Subtração: ${total}`);
 } else if (operador == '*') {
-    console.log(`Multiplicação: ${num_1 * num_2}`)
+    total = num_1 * num_2;
+    console.log(`Multiplicação: ${total}`);
 } else if (operador == '/') {
-    console.log(`Divisão: ${num_1 / num_2}`)
-    var resto = num_1 % num_2
+    total = num_1 / num_2;
+    console.log(`Divisão: ${total}`);
+    resto = num_1 % num_2;
     if (resto != 0) {
-        document.write(`<br>Resto da divisão: ${resto}`)
+        console.log(`Resto da divisão: ${resto}`);
     }
 } else {
-    window.alert('Operador inválido!')
-    document.write('Você digitou um operador inválido &#x1F613, atualize a página ou pressione <strong>F5</strong> e tente novamente &#x1F609.')*/
+    console.log('Operador inválido!');
+}
