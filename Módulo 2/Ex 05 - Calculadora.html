@@ -56,7 +56,7 @@
     <p>Repositório do código em <strong>NODEjs</strong>-> <a href="https://github.com/xpegoux/Softex/blob/main/M%C3%B3dulo%202/Ex%2005%20-%20Calculadora.js">Github</a></p>
 
     <script>
-        function calcular(){
+        function calcular() {
             var txtn1 = window.document.getElementById('txtn1'); //a variavel se chama txt, para referenciar a texto, pois quando ele vem de um input de fora, ele é considerado um texto, para transformar em number basta fazer o que será feito abaixo nas variáveis n1 e n2.
             var txtn2 = window.document.getElementById('txtn2');
             var print = window.document.getElementById('print');
@@ -84,8 +84,8 @@
                     print.innerHTML = `Resultado da Divisão: <strong>${resultado}</strong> <br> Resto da divisão: <strong>${resto}</strong>`
                 }
             } else {
-            print.innerHTML = "Operador inválido!"
-            print.innerHTML = "Você digitou um operador inválido &#x1F613, atualize a página ou pressione <strong>F5</strong> e tente novamente &#x1F609."
+                document.alert ("Operador inválido!")
+                document.alert ("Você digitou um operador inválido &#x1F613, atualize a página ou pressione <strong>F5</strong> e tente novamente &#x1F609.")
             }
     }
     </script>
