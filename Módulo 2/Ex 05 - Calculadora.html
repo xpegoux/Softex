@@ -78,10 +78,10 @@
                 print.innerHTML = `Resultado da Multiplicação: <strong>${resultado}</strong>`
             } else if (op == "4") {
                 resultado = n1 / n2
-                print.innerHTML = `Resultado da Divisão: <strong>${resultado}</strong>`
+                print.innerHTML = `<p>Resultado da Divisão: <strong>${resultado}</strong></p>`
                 resto = n1 % n2
                 if (resto != 0) {
-                    print.innerHTML = `Resultado da Divisão: <strong>${resultado}</strong> <br> Resto da divisão: <strong>${resto}</strong>`
+                    print.innerHTML += `<p>Resto da Divisão: <strong>${resto}</strong></p>`
                 }
             } else {
                 document.alert ("Operador inválido!")
