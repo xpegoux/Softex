@@ -5,6 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex 05 - Calculadora</title>
+    <style>
+        body {
+            font: normal 10pt Arial;
+            background-color: azure;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 90px;
+        }
+        select#op {
+            font: normal 10pt Arial;
+            width: 100px;
+            text-align: center;
+        }
+        input#button {
+            font: normal 9pt Arial;
+        }
+        div#print {
+            font: normal 14pt Arial;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Calculadora JS</h1>
@@ -15,61 +37,57 @@
     <p>[*] com os dois valores e o operador definido, o programa deve fazer a operação e retornar o resultado;</p> 
     <p>[*] se houver divisão, você deve retornar o resultado e a sobra, caso haja alguma.</p>
 
-    <h2>Resultados da Calculadora</h2>
-    <script>
-        //Definindo variáveis e recebimento de valores
-        var num_1 = Number(window.prompt('Digite o primeiro número:'))
-        var num_2 = Number(window.prompt('Digite o segundo número:'))
-        var operador = window.prompt('Digite o operador que você deseja calcular\n[+]\n[-]\n[*]\n[/]')
-        //Definindo condições para apresentar o cálculo dos números
-        if (operador == '+') {
-            document.write(`Soma: ${num_1 + num_2}`) //document.write é utilizado para mostrar no corpo do documento.
-        } else if (operador == '-') {
-            document.write(`Subtracao: ${num_1 - num_2}`)
-        } else if (operador == '*') {
-            document.write(`Multiplicação: ${num_1 * num_2}`)
-        } else if (operador == '/') {
-            document.write(`Divisão: ${num_1 / num_2}`)
-            var resto = num_1 % num_2
-            if (resto != 0) {
-                document.write(`<br>Resto da divisão: ${resto}`)
-            }
-        } else {
-            window.alert('Operador inválido!')
-            document.write('Você digitou um operador inválido &#x1F613, atualize a página ou pressione <strong>F5</strong> e tente novamente &#x1F609.')
-        }
-    </script>
+    <h2>Calculadora</h2>
+
+    <input type="number" name="txtn1" id="txtn1"> 
+
+    <select name="op" id="op">
+		<option value="1">Somar(+)</option>
+		<option value="2">Subtrair(-)</option>
+        <option value="3">Multiplicar(*)</option>
+        <option value="4">Dividir(/)</option>
+	</select>
+
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="calcular" id="button" onclick="calcular()">
+    <div id="print"></div>
+    
     <h2>Código em Node.js</h2>
-    <pre><code>
-        // pacote disponível para download em: www.npmjs.com/package/readline-sync
-var readline = require('readline-sync'); //receber o pacote readline para entrada de dados, armazenada na var readlineS.
-var num_1, num_2, total, resto;
-var operador;
+    <p>Repositório do código em <strong>NODEjs</strong>-> <a href="https://github.com/xpegoux/Softex/blob/main/M%C3%B3dulo%202/Ex%2005%20-%20Calculadora.js">Github</a></p>
 
-num_1 = Number(readline.question('Digite o primeiro numero: '));
-num_2 = Number(readline.question('Digite o segundo numero: '));
-operador = readline.question('Digite o operador que voce deseja calcular\n[+]   [-]\n[*]   [/]\n-> ');
+    <script>
+        function calcular(){
+            var txtn1 = window.document.getElementById('txtn1'); //a variavel se chama txt, para referenciar a texto, pois quando ele vem de um input de fora, ele é considerado um texto, para transformar em number basta fazer o que será feito abaixo nas variáveis n1 e n2.
+            var txtn2 = window.document.getElementById('txtn2');
+            var print = window.document.getElementById('print');
+            var operador = window.document.getElementById('op');
+            op = String(operador.value); //
+            var n1 = Number(txtn1.value); //receber o valor do txtn1
+            var n2 = Number(txtn2.value); //receber o valor do txtn2            
+            var resto
+            var resultado 
 
-if (operador == '+') {
-    total = num_1 + num_2;
-    console.log(`Soma: ${total}`);
-} else if (operador == '-') {
-    total = num_1 - num_2;
-    console.log(`Subtração: ${total}`);
-} else if (operador == '*') {
-    total = num_1 * num_2;
-    console.log(`Multiplicação: ${total}`);
-} else if (operador == '/') {
-    total = num_1 / num_2;
-    console.log(`Divisão: ${total}`);
-    resto = num_1 % num_2;
-    if (resto != 0) {
-        console.log(`Resto da divisão: ${resto}`);
+            if (op == "1") {
+                resultado = n1 + n2
+                print.innerHTML = `Resultado da Soma: <strong>${resultado}</strong>`
+            } else if (op == "2") {
+                resultado = n1 - n2
+                print.innerHTML = `Resultado da Subtração: <strong>${resultado}</strong>`
+            } else if (op == "3") {
+                resultado = n1 * n2
+                print.innerHTML = `Resultado da Multiplicação: <strong>${resultado}</strong>`
+            } else if (op == "4") {
+                resultado = n1 / n2
+                print.innerHTML = `Resultado da Divisão: <strong>${resultado}</strong>`
+                resto = n1 % n2
+                if (resto != 0) {
+                    print.innerHTML = `Resultado da Divisão: <strong>${resultado}</strong> <br> Resto da divisão: <strong>${resto}</strong>`
+                }
+            } else {
+            print.innerHTML = "Operador inválido!"
+            print.innerHTML = "Você digitou um operador inválido &#x1F613, atualize a página ou pressione <strong>F5</strong> e tente novamente &#x1F609."
+            }
     }
-} else {
-    console.log('Operador inválido!');
-}
-    </code></pre>
-    <p>Repositório do código acima, em node.js:<a href="https://github.com/xpegoux/Softex/blob/main/M%C3%B3dulo%202/Ex%2005%20-%20Calculadora.js"> Github</a></p>
+    </script>
 </body>
 </html>
