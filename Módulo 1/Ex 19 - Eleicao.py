@@ -17,7 +17,7 @@ class Candidatos(enum.Enum):
     candidato_Z = 515
     branco = 0
     
-def Eleicao():
+def eleicao():
     l1 = True
     candidato_X = 0
     candidato_Y = 0
@@ -63,4 +63,4 @@ def Eleicao():
     else:
         print('*---Houve um empate!---*\n''Capitão Pátria [889] ->',candidato_X,'\nSoldier Boy [847] ->',candidato_Y,'\nBilly Butcher [515]',candidato_Z,'\nBranco [0] ->',branco,'\nNulos ->',nulo)                    
 
-Eleicao()                        
+eleicao()                        
