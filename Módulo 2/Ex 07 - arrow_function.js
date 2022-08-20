@@ -8,16 +8,16 @@ Crie um programa que contenha os seguintes tipos de funções:
 
 */
 //void function
-function Function(){
-    return console.log("Função vazia!")    
+function functionVazia(){
+    return console.log("Função vazia!");
 }
 //function com parâmetros e retorno.
 function newFunction(nome, sobrenome){
-    return console.log(nome + " " + sobrenome)
+    return console.log(nome + " " + sobrenome);
 }
 //arrow function
-const arrowFunction = (nome, sobrenome) =>  console.log(`${nome} ${sobrenome}`)
+const arrowFunction = (nome, sobrenome) =>  console.log(`${nome} ${sobrenome}`);
 
-Function()
-newFunction("José", "Cabral")
-arrowFunction("Carlos", "Eduardo")
+functionVazia();
+newFunction("José", "Cabral");
+arrowFunction("Carlos", "Eduardo");
