@@ -10,7 +10,7 @@ Observações:
 - o número da conta deve retornar o número da conta.
 */
 
-//Com método construtor!
+//Método Construtor
 class Banco{    
     #conta;
     #saldo;
@@ -23,7 +23,7 @@ class Banco{
         this.#agencia = agencia;
     }
     get buscarSaldo(){
-        return `Saldo atual: ${this.#saldo}`;
+        return `Saldo atual: R$ ${this.#saldo}`;
     }
     set deposito(depositou){
         this.#saldo += depositou;
@@ -36,8 +36,30 @@ class Banco{
     }
 }
 var conta1 = new Banco(15329, 500, "poupança", 19);
-console.log(conta1.buscarSaldo);
-console.log(`Depositando  ${conta1.deposito=100}`);
-console.log(`Sacando ${conta1.saque=300}`);
 console.log(conta1.numeroConta);
 console.log(conta1.buscarSaldo);
+console.log(`Depositando  R$ ${conta1.deposito=100}`);
+console.log(`Sacando R$ ${conta1.saque=300}`);
+console.log(conta1.buscarSaldo);
+
+console.log('______________________________________________________')
+
+//Método Inicializador
+let Banco2 = {
+    //Propriedades
+    conta: 15397,
+    saldo: 500,
+    tipo_de_conta: "poupança",
+    agencia: 19,
+    //Métodos
+    buscar_saldo() { return console.log(`Valor atual: R$ ${Banco2.saldo}`); },
+    deposito(depositou) { Banco2.saldo += depositou;},
+    saque(sacou) { Banco2.saldo -= sacou},
+    numero_da_conta() { return console.log(`Conta: ${Banco2.conta}`)}
+};
+Banco2.numero_da_conta();
+Banco2.buscar_saldo();
+Banco2.deposito(50);
+console.log("Depositou R$ 50 e Sacou R$ 100");
+Banco2.saque(100);
+Banco2.buscar_saldo();
