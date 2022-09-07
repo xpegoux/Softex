@@ -12,10 +12,10 @@ Considere que:
 - através do tipo informado, a fábrica decide qual tipo de computador irá instanciar;
 - quando o método .toString() for aplicado a um computador, ele deve imprimir seus atributos.*/
 
-import {Creator} from "./creator.js"
+import { Creator } from "./Creator";
 
-var computador = Creator("12", "250", "2.30", true);
-computador.toString();
-
-var server = Creator("36", "5000", "10", false);
+let pc = Creator.createProduct(8,250,2.3,true);
+let server = Creator.createProduct(24,5000,8.0,false);
+pc.toString();
 server.toString();
+pc.type;
