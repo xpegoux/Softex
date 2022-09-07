@@ -14,8 +14,10 @@ Considere que:
 
 import { Creator } from "./Creator";
 
-let pc = Creator.createProduct(8,250,2.3,true);
-let server = Creator.createProduct(24,5000,8.0,false);
+//true -> cria objetos do tipo computador comun
+//false -> cria objetos do tipo server
+const pc = Creator.createProduct(8,250,2.3,true);
+const server = Creator.createProduct(24,5000,8.0,false);
 pc.toString();
 server.toString();
 pc.type;
