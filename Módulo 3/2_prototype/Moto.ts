@@ -23,12 +23,4 @@ export class Moto extends Veiculo {
         const clone = Object.assign({}, this);
         return clone;
     }
-    public represent(): void {
-        throw new Error("Method not implemented.");
-    }
 }
-
-/*
-const c: Moto = new Moto("TITAN", "HONDA", "PRETO", 4, "Visor reduzido", "VERMELHO");
-console.log(c.tipoCapacete);
-*/

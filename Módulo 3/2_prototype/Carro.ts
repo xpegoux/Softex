@@ -24,11 +24,4 @@ export class Carro extends Veiculo {
         const clone = Object.assign({}, this);
         return clone;
     }
-    public represent(): void {}
 }
-
-/*
-const c: Carro = new Carro("sport", "ferrari", "vermelho", 4, 4, false);
-
-const c2 = c.clone();
-console.log(c2);*/

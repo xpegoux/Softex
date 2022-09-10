@@ -18,5 +18,5 @@ export abstract class Veiculo {
         const clone = Object.assign({}, this);
         return clone;
     }
-    public abstract represent() : void;
+    public represent() : void {}
 }
