@@ -1,0 +1,12 @@
+{
+  "name": "3_decorator",
+  "version": "1.0.0",
+  "description": "Decorator Sanduiches",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Erivaldo Barros",
+  "license": "ISC"
+}
