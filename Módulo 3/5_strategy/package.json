@@ -1,0 +1,15 @@
+{
+  "name": "5_strategy",
+  "version": "1.0.0",
+  "description": "Strategy behavior pattern exercice",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Erivaldo Barros",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.4"
+  }
+}
