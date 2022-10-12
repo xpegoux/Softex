@@ -61,9 +61,9 @@ CREATE TABLE LIVRO_EMPRESTIMO
 
 --> Inserindo registros nas tabelas <--
 
-INSERT INTO ALUNO (Nome, Matricula, Email, Endereco, Telefone) VALUES ('João Carlos', 1234, 'Jcarlos@gmail.com', 'Rua 13 de maio', '(11)7825-4489');
-INSERT INTO ALUNO (Nome, Matricula, Email, Endereco, Telefone) VALUES ('José Vitor', 2345, 'Jvitor@gmail.com', 'Rua da Saudade', '(11)7825-6589');
-INSERT INTO ALUNO (Nome, Matricula, Email, Endereco, Telefone) VALUES ('Paulo André', 3456, 'Pandr@gmail.com', 'Rua do Sol', '(11)7825-4495');
+INSERT INTO ALUNO (Nome, Matricula, Email, Endereco, Telefone) VALUES ('João Carlos', 1234, 'Jcarlos@gmail.com', 'Rua 13 de maio', 1178254489);
+INSERT INTO ALUNO (Nome, Matricula, Email, Endereco, Telefone) VALUES ('José Vitor', 2345, 'Jvitor@gmail.com', 'Rua da Saudade', 1178256589);
+INSERT INTO ALUNO (Nome, Matricula, Email, Endereco, Telefone) VALUES ('Paulo André', 3456, 'Pandr@gmail.com', 'Rua do Sol', 1178254495);
 
 INSERT INTO LIVRO (Titulo, Autor) VALUES ('Modelo Conceitual e Diagramas ER', 'Pressman, Roger S.');
 INSERT INTO LIVRO (Titulo, Autor) VALUES ('Livro 2: Modelo Relacional e Álgebra Relacional', 'Heuser, Carlos Alberto');
