@@ -5,59 +5,44 @@ USE BIBLIOTECA;
 
 --> Criando Tabelas <--
 
-CREATE TABLE ALUNO 
-(
+CREATE TABLE ALUNO (
     ID INT NOT NULL AUTO_INCREMENT,
     Nome VARCHAR(30) NOT NULL,
     Matricula INT NOT NULL,
     Email VARCHAR(60) NOT NULL,
     Endereco VARCHAR(40) NOT NULL,
     Telefone INT,
+    PRIMARY KEY (ID));
 
-    PRIMARY KEY (ID)
-);
-
-CREATE TABLE EMPRESTIMO
-(
+CREATE TABLE EMPRESTIMO (
     Codigo INT NOT NULL AUTO_INCREMENT,
     Data_hora DATETIME,
     Matric_Aluno INT,
     Data_devolucao DATE,
-
     PRIMARY KEY (Codigo),
+    FOREIGN KEY (Matric_Aluno) REFERENCES ALUNO(ID));
 
-    CONSTRAINT FK_EMPRESTIMO_ALUNO FOREIGN KEY (Matric_Aluno) REFERENCES ALUNO(ID)        
-);
-
-CREATE TABLE SESSAO
-(
+CREATE TABLE SESSAO (
     Codigo INT NOT NULL AUTO_INCREMENT,
     Descricao VARCHAR(50),
     Localizacao VARCHAR(50),
+    PRIMARY KEY (Codigo));
 
-    PRIMARY KEY (Codigo)
-);
-
-CREATE TABLE LIVRO
-(
+CREATE TABLE LIVRO (
     Cod_Livro INT NOT NULL AUTO_INCREMENT,
     Titulo VARCHAR(50) NOT NULL,
     Autor VARCHAR(50) NOT NULL,
     Cod_Sessao INT,
-
     PRIMARY KEY (Cod_Livro),
+    FOREIGN KEY (Cod_Sessao) REFERENCES SESSAO(Codigo));
 
-    CONSTRAINT FK_SESSAO_LIVRO FOREIGN KEY (Cod_Sessao) REFERENCES SESSAO(Codigo)
-);
+CREATE TABLE LIVRO_EMPRESTIMO (
+    Cod_livro INT NOT NULL,
+    Cod_Emprestimo INT NOT NULL,
 
-CREATE TABLE LIVRO_EMPRESTIMO
-(
-    Cod_livro INT,
-    Cod_Emprestimo INT,
-
-    CONSTRAINT FK_LIVRO_EMPRESTIMO FOREIGN KEY (Cod_livro) REFERENCES LIVRO(Cod_Livro),
-    CONSTRAINT FK_EMPRESTIMO_LIVRO FOREIGN KEY (Cod_Emprestimo) REFERENCES EMPRESTIMO(Codigo) 
-);
+    PRIMARY KEY (Cod_livro, Cod_Emprestimo),
+    FOREIGN KEY (Cod_livro) REFERENCES LIVRO(Cod_Livro),
+    FOREIGN KEY (Cod_Emprestimo) REFERENCES EMPRESTIMO(Codigo));
 
 --> Inserindo registros nas tabelas <--
 
