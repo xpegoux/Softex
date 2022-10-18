@@ -49,29 +49,33 @@ CREATE TABLE Treinador_Pokemon (
   FOREIGN KEY (idPokemon) REFERENCES Pokemon (idPokemon));
 
 --> Inserindo dados nas tabelas <--
-INSERT INTO treinador (nomeTreinador, regiao, dataNascimento) VALUES ('Ash', 'Kanto', "1997-05-31");
-INSERT INTO treinador (nomeTreinador, regiao, dataNascimento) VALUES ('Brock', 'Kanto', "1990-02-22");
-INSERT INTO treinador (nomeTreinador, regiao, dataNascimento) VALUES ('Misty', 'Kanto', "1992-12-10");
-INSERT INTO treinador (nomeTreinador, regiao, dataNascimento) VALUES ('Randomboy', 'Kanto', "1998-03-01");
 
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Bulbasaur', 'Planta/Veneno');
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Ivysaur', 'Planta/Veneno');
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Venusaur', 'Planta/Veneno');
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Charmander', 'Fogo');
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Charmeleon', 'Fogo');
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Charizard', 'Fogo/Voador');
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Squirtle', 'Água');
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Wartortle', 'Água');
-INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES ('Blastoise', 'Água');
+INSERT INTO treinador (nomeTreinador, regiao, dataNascimento) VALUES
+  ('Ash', 'Kanto', "1997-05-31"),
+  ('Brock', 'Kanto', "1990-02-22"),
+  ('Misty', 'Kanto', "1992-12-10"),
+  ('Randomboy', 'Kanto', "1998-03-01");
 
-INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES ('Ginasio Rochoso', 'Pedra', 'Brock');
-INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES ('Ginasio Aquático', 'Água', 'Misty');
-INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES ('Ginasio Elétrico', 'Elétrico', 'Lt.Surge');
-INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES ('Ginasio das Ervas', 'Planta', 'Erika');
-INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES ('Ginasio Tóxico', 'Veneno', 'Koga');
-INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES ('Ginasio Confuso', 'Psíquico', 'Sabrina');
-INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES ('Ginasio Quente', 'Fogo', 'Blaine');
-INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES ('Ginasio Malvediço', 'Terra', 'Giovanni');
+INSERT INTO pokemon (nomePokemon, tipoPokemon) VALUES
+  ('Bulbasaur', 'Planta/Veneno'),
+  ('Ivysaur', 'Planta/Veneno'),
+  ('Venusaur', 'Planta/Veneno'),
+  ('Charmander', 'Fogo'),
+  ('Charmeleon', 'Fogo'),
+  ('Charizard', 'Fogo/Voador'),
+  ('Squirtle', 'Água'),
+  ('Wartortle', 'Água'),
+  ('Blastoise', 'Água');
+
+INSERT INTO ginasio (nomeGinasio, tipoGinasio, nomeLider) VALUES
+  ('Ginasio Rochoso', 'Pedra', 'Brock'),
+  ('Ginasio Aquático', 'Água', 'Misty'),
+  ('Ginasio Elétrico', 'Elétrico', 'Lt.Surge'),
+  ('Ginasio das Ervas', 'Planta', 'Erika'),
+  ('Ginasio Tóxico', 'Veneno', 'Koga'),
+  ('Ginasio Confuso', 'Psíquico', 'Sabrina'),
+  ('Ginasio Quente', 'Fogo', 'Blaine'),
+  ('Ginasio Malvediço', 'Terra', 'Giovanni');
 
 --> Joins Functions <--
 
