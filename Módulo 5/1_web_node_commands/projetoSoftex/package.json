@@ -1,0 +1,15 @@
+{
+  "name": "projetosoftex",
+  "version": "1.0.0",
+  "description": "Atividade 1 do primeiro sub-módulo de NodeJS da softex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Erivaldo Barros",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
