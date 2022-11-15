@@ -1,0 +1,16 @@
+{
+  "name": "4_express_routes_params_querys",
+  "version": "1.0.0",
+  "description": "Exercicio 4 para criar rotas dinamicas e/ou estáticas utilizando parametros e/ou querys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Erivaldo Barros",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6"
+  }
+}
