@@ -6,7 +6,7 @@
 //Configs
     //Express app & porta
         const app = express();
-        const porta = 8081;
+        const porta = 8080;
 
     //Body parser
         app.use(bodyParser.urlencoded({ extended: false }));
