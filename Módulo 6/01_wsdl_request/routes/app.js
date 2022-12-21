@@ -13,7 +13,7 @@ let appRouter = async (app) => {
         if (wsdl == wsdl) res.status(200).send(resParseXML);        
     });
 
-    app.get('*', (req, res) => {
+    app.all('*', (req, res) => {
         res.sendStatus(404);
     })
 }
