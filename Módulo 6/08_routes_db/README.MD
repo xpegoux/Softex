@@ -11,6 +11,7 @@ Com o REST podemos acessar as rotas para listar todos os games vencedores do ***
 No diretório **/database** possui o arquivo **/database/create.sql** que contém os comandso SQL para a criação do banco e das tabelas para você pode realizar os testes localmente.
 
 ## Estrutura em Camadas desta API
+Esta estrutura delega melhor as regras de negócio para cada camada tornado o fluxo e manutenção melhor.
+
 ![poc token cad com sucesso](system_layers.png)
 
-Esta estrutura delega melhor as regras de negócio para cada camada tornado o fluxo e manutenção melhor.
